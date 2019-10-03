@@ -10,8 +10,10 @@ const routes = require('./routes');
 const app = express();
 
 
+const configdb = require('./configdb');
 
-mongoose.connect('mongodb+srv://bhps17:coxa080695@clusteromnistack-7qtaa.mongodb.net/dbaircnc?retryWrites=true&w=majority', {
+
+mongoose.connect(`mongodb+srv://${configdb.user}:${configdb.pw}@clusteromnistack-7qtaa.mongodb.net/dbaircnc?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
