@@ -16,5 +16,5 @@ routes.post('/sessions', SessionController.store);
 routes.get('/spots', SpotController.index);
 routes.post('/spots', upload.single('thumbnail') ,SpotController.store);
 routes.get('/dashboard',DashBoardController.show);
-routes.post('/spots/:id/bookings', Boo )
+routes.post('/spots/:id/bookings', BookingController.store);
 module.exports = routes;
